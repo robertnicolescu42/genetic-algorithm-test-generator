@@ -1,0 +1,8 @@
+<app-quiz-form></app-quiz-form>
+<button type="button" class="btn btn-primary" (click)="getCall()">
+  Click me
+</button>
+
+<div>
+  {{ myResult | async | json }}
+</div>
