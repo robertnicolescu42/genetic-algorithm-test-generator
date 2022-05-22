@@ -1,1 +1,72 @@
-<p>quiz-form works!</p>
+<div class="container w-25 border border-3 p-3">
+  <form [formGroup]="quizFormGroup">
+    <div class="mb-3">
+      <label for="difficultyInput" class="form-label">Quiz Difficulty</label>
+      <input
+        type="number"
+        min="5"
+        max="20"
+        class="form-control"
+        id="difficultyInput"
+        placeholder="10"
+        formControlName="GD"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="populationSizeInput" class="form-label"
+        >Population Size</label
+      >
+      <input
+        type="number"
+        min="100"
+        max="500000"
+        class="form-control"
+        id="populationSizeInput"
+        placeholder="1000"
+        formControlName="population_size"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="interationSizeInput" class="form-label"
+        >Number of iterations</label
+      >
+      <input
+        type="number"
+        min="1"
+        max="500000"
+        class="form-control"
+        id="interationSizeInput"
+        placeholder="10000"
+        formControlName="iterations_size"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="mutationSizeInput" class="form-label"
+        >Number of mutations</label
+      >
+      <input
+        type="number"
+        min="1"
+        max="500000"
+        class="form-control"
+        id="mutationSizeInput"
+        placeholder="1000"
+        formControlName="mutation_size"
+        required
+      />
+    </div>
+    <div>
+      <button
+        [disabled]="!quizFormGroup.valid"
+        type="submit"
+        class="btn btn-primary"
+        (click)="saveConfiguration()"
+      >
+        Save configuration
+      </button>
+    </div>
+  </form>
+</div>
