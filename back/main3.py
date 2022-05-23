@@ -1,11 +1,25 @@
 import random
-from config import GD, population_size, iterations_size, mutation_size
+# from config import GD, population_size, iterations_size, mutation_size
 from questionsList import dataset_list
 
 # GD = 10
 questions = dataset_list
 number_of_questions = len(questions)
+GD = 0
+population_size = 0
+iterations_size = 0
+mutation_size = 0
+from config import GD, population_size, iterations_size, mutation_size
 
+def setConfigParams(GDnumber, pop_size, iter_size, mut_size):
+    global GD
+    global population_size
+    global iterations_size
+    global mutation_size
+    GD = int(GDnumber)
+    population_size = int(pop_size)
+    iterations_size = int(iter_size)
+    mutation_size = int(mut_size)
 
 def decizie(arr):
     answer = 0
